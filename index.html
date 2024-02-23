@@ -1,32 +1,58 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="https://t.me/tiddies2dbot"/>
+  <meta name="twitter:title" content="Booba watcher"/>
+  <meta name="twitter:creator:id" content="3033952421"/>
+  <meta name="twitter:description" content="Telegram bot with hentai boobas"/>
+  <meta name="twitter:image" content="https://static.tiddies.pics/img/ahegao_sm.jpeg"/>
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Booba watcher"/>
+  <meta property="og:description" content="Telegram bot with hentai boobas"/>
+  <meta property="og:url" content="https://t.me/tiddies2dbot"/>
+  <meta property="og:image" content="https://static.tiddies.pics/img/ahegao_sm.jpeg"/>
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://static.tiddies.pics/css/styles.css">
+  <script src="https://kit.fontawesome.com/ecef1395b9.js" crossorigin="anonymous"></script>
+  <title>Anime titties bot for telegram</title>
 </head>
+<body style="background-image: url(https://static.tiddies.pics/img/ahegao.jpeg); background-size: cover">
+<div class="container-fluid vertical-center">
+  <div class="bg-light p-5 rounded-3 overflow-auto my-2">
+    <h1>Anime tiddies bot</h1>
+    <p class="lead">This bot can post anime tiddies to your chat or into PM</p>
+    <div class="d-grid gap-2 d-md-flex">
+      <a class="btn btn-lg btn-danger me-md-2" role="button" href="https://t.me/tiddies2dbot">
+        <i class="fa-brands fa-telegram"></i>&nbsp;&nbsp;Visit&nbsp;now!
+      </a>
+      <a class="btn btn-lg btn-danger" role="button" href="https://github.com/cyberimp/dokku-booba">
+        <i class="fa-brands fa-github"></i>&nbsp;&nbsp;Source<span
+        class="d-none d-lg-inline d-md-inline">&nbsp;code</span>
+      </a>
+    </div>
+    <hr class="my-4">
+    <p>
+      Some stats for this bot: <span id="chats" class="badge bg-secondary">&nbsp;</span> active chats with bot,
+      from which <span id="private" class="badge bg-secondary">&nbsp;</span> is invite-only chats
+    </p>
 
-<body>
-
-  <!-- Add your site or application content here -->
-  <p>Here be dragons</p>
-  <script src="js/app.js"></script>
-
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script>
+  fetch('https://hentai.tiddies.pics/stats.json').then(r => r.json()).then(({ chats, priv }) => {
+    document.querySelector('#chats').innerText = chats
+    document.querySelector('#private').innerText = priv
+  })
+</script>
 </body>
-
 </html>
