@@ -42,8 +42,8 @@
       Some stats for this bot: <span id="chats" class="badge bg-secondary">&nbsp;</span> active chats with bot,
       from which <span id="private" class="badge bg-secondary">&nbsp;</span> is invite-only chats
     </p>
-    <div>
-      <canvas id="myChart"></canvas>
+    <div class="row">
+      <canvas id="myChart" class="my-4"></canvas>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -68,6 +68,9 @@
             },
             options: {
               scales: {
+                x: {
+
+                }
                 y: {
                   beginAtZero: true
                 }
