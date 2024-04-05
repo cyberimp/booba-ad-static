@@ -58,9 +58,12 @@
             data: {
               labels: data.map(row => row.date),
               datasets: [{
-                label: 'requests by date',
+                label: 'requests',
                 data: data.map(row => row.requests),
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)'
+
               }]
             },
             options: {
