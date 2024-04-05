@@ -42,6 +42,37 @@
       Some stats for this bot: <span id="chats" class="badge bg-secondary">&nbsp;</span> active chats with bot,
       from which <span id="private" class="badge bg-secondary">&nbsp;</span> is invite-only chats
     </p>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+      fetch('https://hentai.tiddies.pics/dateChart.json')
+        .then(res => res.json())
+        .then(data => {
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: data.map(row => row.date),
+              datasets: [{
+                label: 'requests by date',
+                data: data.map(row => row.requests),
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        })
+    </script>
 
   </div>
 </div>
