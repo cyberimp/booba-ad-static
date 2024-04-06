@@ -48,40 +48,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script>
-      const ctx = document.getElementById('myChart');
-      fetch('https://hentai.tiddies.pics/dateChart.json')
-        .then(res => res.json())
-        .then(data => {
-          new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: data.map(row => row.date),
-              datasets: [{
-                label: 'horny requests',
-                data: data.map(row => row.requests),
-                borderWidth: 1,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)'
-
-              }]
-            },
-            options: {
-              maintainAspectRatio: false,
-              scales: {
-                x: {
-                  ticks: {
-                    maxRotation: 0
-                  }
-                },
-                y: {
-                  beginAtZero: true
-                }
-              }
-            }
-          });
-        })
-    </script>
+    <script src="js/stats.js"></script>
 
   </div>
 </div>
