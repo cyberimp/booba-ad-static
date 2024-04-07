@@ -22,14 +22,16 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
           data: data.map(row => row.requests),
           borderWidth: 1,
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgb(255, 99, 132)'
+          borderColor: 'rgb(255, 99, 132)',
+          order: 2
         },
         {
           label: 'horny users',
           data: data.map(row => row.users),
           borderWidth: 1,
           backgroundColor: 'rgba(132, 99, 255, 0.2)',
-          borderColor: 'rgb(132, 99, 255)'
+          borderColor: 'rgb(132, 99, 255)',
+          order: 1
         },
       ]
     },
