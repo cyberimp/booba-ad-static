@@ -18,7 +18,7 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
     data: {
       labels: data.map(row => row.date),
       datasets: [{
-          label: 'horny requests',
+          label: 'requests',
           data: data.map(row => row.requests),
           borderWidth: 1,
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -26,7 +26,7 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
           order: 2
         },
         {
-          label: 'horny users',
+          label: 'users',
           data: data.map(row => row.users),
           borderWidth: 1,
           backgroundColor: 'rgba(132, 99, 255, 0.2)',
