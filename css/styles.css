@@ -3,14 +3,11 @@ html, body {
     height: 100%;
 }
 
-.vertical-center {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    background-image: url(https://static.tiddies.pics/img/ahegao.jpeg);
+    background-size: cover;
 }
 
 .badge {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.30em;
 }
