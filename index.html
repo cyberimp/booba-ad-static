@@ -47,14 +47,73 @@
       </canvas>
       <script>
         const canvas = document.getElementById("myChart")
-        const c2d = canvas.getContext("2d")
-        c2d.textBaseline = "middle"
-        c2d.textAlign = "center"
-        const canvas_width = canvas.width
-        const canvas_height = canvas.height
-        c2d.font = "Helvetica"
-        c2d.fillStyle = "black"
-        c2d.fillText('Loading stats chart...', canvas_width/2, canvas_height/2)
+        canvas.width = 200;
+        canvas.height = 200;
+        canvas.style.backgroundColor = "white";
+
+        const c2d = canvas.getContext("2d");
+
+        const bigCircle = {
+          center: {
+            x: 100,
+            y: 100
+          },
+          radius: 50,
+          speed: 4
+        }
+
+        const smallCircle = {
+          center: {
+            x: 100,
+            y: 100
+          },
+          radius: 30,
+          speed: 2
+        }
+
+        let progress = 0;
+
+        function loading() {
+          c2d.clearRect(0, 0, canvas.width, canvas.height);
+
+          progress += 0.01;
+          if (progress > 1) {
+            progress = 0;
+          }
+
+          drawCircle(bigCircle, progress);
+          drawCircle(smallCircle, progress);
+
+          requestAnimationFrame(loading);
+        }
+        loading();
+
+        function drawCircle(circle, progress) {
+          c2d.beginPath();
+          const start = accelerateInterpolator(progress) * circle.speed;
+          const end = decelerateInterpolator(progress) * circle.speed;
+          c2d.arc(circle.center.x, circle.center.y, circle.radius, (start - 0.5) * Math.PI, (end - 0.5) * Math.PI);
+          c2d.lineWidth = 3;
+          c2d.strokeStyle = "pink";
+          c2d.fill();
+          c2d.stroke();
+        }
+
+        function accelerateInterpolator(x) {
+          return x * x;
+        }
+
+        function decelerateInterpolator(x) {
+          return 1 - ((1 - x) * (1 - x));
+        }
+        // const c2d = canvas.getContext("2d")
+        // c2d.textBaseline = "middle"
+        // c2d.textAlign = "center"
+        // const canvas_width = canvas.width
+        // const canvas_height = canvas.height
+        // c2d.font = "Helvetica"
+        // c2d.fillStyle = "black"
+        // c2d.fillText('Loading stats chart...', canvas_width/2, canvas_height/2)
       </script>
     </div>
 
