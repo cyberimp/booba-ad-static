@@ -14,7 +14,7 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
  */
 .then(data => {
   const animation_circle = document.getElementById("loadingCircle");
-  animation_circle.visibility = "hidden";
+  animation_circle.style.display = "none";
   new Chart(ctx, {
     type: 'bar',
     data: {
