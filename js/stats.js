@@ -13,7 +13,8 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
  * @param {Array<DataRow>} data
  */
 .then(data => {
-  animation_stop = true;
+  const animation_circle = document.getElementById("loadingCircle");
+  animation_circle.visibility = "hidden";
   new Chart(ctx, {
     type: 'bar',
     data: {
