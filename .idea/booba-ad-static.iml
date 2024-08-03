@@ -9,5 +9,9 @@
     <orderEntry type="library" name="chart.js" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="stats" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="ecef1395b9" level="application" />
+    <orderEntry type="library" name="chart.js" level="application" />
+    <orderEntry type="library" name="stats" level="application" />
   </component>
 </module>

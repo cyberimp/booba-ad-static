@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="static.tiddies.pics" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="static.tiddies.pics">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="https://static.tiddies.pics/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
