@@ -13,6 +13,7 @@ fetch('https://hentai.tiddies.pics/dateChart.json')
  * @param {Array<DataRow>} data
  */
 .then(data => {
+  animation_stop = true;
   new Chart(ctx, {
     type: 'bar',
     data: {
