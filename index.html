@@ -42,82 +42,11 @@
       from which <span id="private" class="badge bg-secondary">&nbsp;</span> is invite-only chats
     </p>
     <div class="row">
-      <canvas id="myChart" class="my-1">
-        loading stats chart...
-      </canvas>
-      <script>
-        let animation_stop = false
-        const canvas = document.getElementById("myChart")
-        canvas.width = 200;
-        canvas.height = 100;
-        canvas.style.backgroundColor = "white";
-
-        const c2d = canvas.getContext("2d");
-
-        const bigCircle = {
-          center: {
-            x: 100,
-            y: 50
-          },
-          radius: 20,
-          speed: 4
-        }
-
-        const smallCircle = {
-          center: {
-            x: 100,
-            y: 50
-          },
-          radius: 10,
-          speed: 2
-        }
-
-        let progress = 0;
-
-        function loading() {
-          c2d.clearRect(0, 0, canvas.width, canvas.height);
-
-          progress += 0.01;
-          if (progress > 1) {
-            progress = 0;
-          }
-
-          drawCircle(bigCircle, progress);
-          drawCircle(smallCircle, progress);
-          if (!animation_stop) {
-            requestAnimationFrame(loading);
-          }
-        }
-        loading();
-
-        function drawCircle(circle, progress) {
-          c2d.beginPath();
-          const start = accelerateInterpolator(progress) * circle.speed;
-          const end = decelerateInterpolator(progress) * circle.speed;
-          c2d.arc(circle.center.x, circle.center.y, circle.radius, (start - 0.5) * Math.PI, (end - 0.5) * Math.PI);
-          c2d.lineWidth = 3;
-          c2d.strokeStyle = "pink";
-          c2d.fillStyle = "white";
-          c2d.fill();
-          c2d.stroke();
-        }
-
-        function accelerateInterpolator(x) {
-          return x * x;
-        }
-
-        function decelerateInterpolator(x) {
-          return 1 - ((1 - x) * (1 - x));
-        }
-        // const c2d = canvas.getContext("2d")
-        // c2d.textBaseline = "middle"
-        // c2d.textAlign = "center"
-        // const canvas_width = canvas.width
-        // const canvas_height = canvas.height
-        // c2d.font = "Helvetica"
-        // c2d.fillStyle = "black"
-        // c2d.fillText('Loading stats chart...', canvas_width/2, canvas_height/2)
-      </script>
+      <canvas id="myChart" class="my-1"></canvas>
+      <img class="img-responsive"
+           style="position:absolute;"
+           src="https://static.tiddies.pics/img/loading.gif"
+           alt="loading stats chart..."/>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
