@@ -47,7 +47,7 @@
       </canvas>
       <script>
         const canvas = document.getElementById("myChart")
-        const c2d = canvas.getContext("2d")
+        const c2d = canvas.getContext("2d", {alpha: false})
         c2d.textBaseline = "middle"
         c2d.textAlign = "center"
         const canvas_width = canvas.width
